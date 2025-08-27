@@ -132,5 +132,12 @@ augroup END
 " Avoiding side effects {{{1
 let &cpo = s:save_cpo
 
+" ToggleSyntax {{{1
+let g:TableModeSyntaxDict = {
+\   'contains': 'TableBorder,TableSeparator,TableColumnAlign,' .
+\               'yesCell,noCell,maybeCell,redCell,greenCell,yellowCell,blueCell,whiteCell,darkCell',
+\   'containedin': 'ALL'
+\}
+
 " ModeLine {{{
 " vim: sw=2 sts=2 fdl=0 fdm=marker

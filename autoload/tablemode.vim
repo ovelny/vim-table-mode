@@ -69,10 +69,10 @@ function! s:ToggleSyntax() "{{{2
   if !g:table_mode_syntax | return | endif
 
   if tablemode#IsActive()
-    exec 'syntax match Table'
-          \ '/' . tablemode#table#StartExpr() . '\zs|.\+|\ze' . tablemode#table#EndExpr() . '/'
-          \ 'contains=TableBorder,TableSeparator,TableColumnAlign,yesCell,noCell,maybeCell,redCell,greenCell,yellowCell,blueCell,whiteCell,darkCell'
-          \ 'containedin=ALL'
+    execute 'syntax match Table'
+      \ '/' . tablemode#table#StartExpr() . '\zs|.\+|\ze' . tablemode#table#EndExpr() . '/'
+      \ 'contains=' . g:TableModeSyntaxDict.contains
+      \ 'containedin=' . g:TableModeSyntaxDict.containedin
     syntax match TableSeparator /|/ contained
     syntax match TableColumnAlign /:/ contained
     syntax match TableBorder /[\-+]\+/ contained
