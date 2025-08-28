@@ -133,7 +133,7 @@ augroup END
 let &cpo = s:save_cpo
 
 " ToggleSyntax {{{1
-let g:TableModeSyntaxDict = {
+let g:table_mode_syntax_dict = {
 \   'contains': 'TableBorder,TableSeparator,TableColumnAlign,' .
 \               'yesCell,noCell,maybeCell,redCell,greenCell,yellowCell,blueCell,whiteCell,darkCell',
 \   'containedin': 'ALL'
